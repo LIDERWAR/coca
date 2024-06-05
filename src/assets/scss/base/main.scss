@@ -15,8 +15,9 @@ html {
 .body {
   position: relative;
   overflow-x: hidden;
-  color: var(--neutral-color-100);
-  background-color: var(--neutral-color-10);
+  color: var(--neutral-colors-100);
+  background-color: var(--neutral-colors-10);
+  overflow-x: hidden;
 
   &--fixed {
     overflow-y: hidden;
