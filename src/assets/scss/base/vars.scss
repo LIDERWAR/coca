@@ -2,6 +2,7 @@
   //neutral colors
   --neutral-colors-10: #fff;
   --neutral-colors-20: #f5f5f5;
+  --neutral-colors-40: #ced1d8;
   --neutral-colors-60: #18181d;
   --neutral-colors-100: #1d1e25;
   --neutral-colors-120: #828282;
@@ -15,7 +16,11 @@
   //primary-colors
   --primary-colors-50: #4e7ddb;
 
+  //succsess colors
+  --succsess-colors-70: #e2f8f0b3;
+
   //z-index
+  --z-index-0: -1;
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;
@@ -25,6 +30,10 @@
   //container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mobile {
+    --container-width: 480px;
+  }
 
   // transition
   --transition: 0.2s ease-in-out;
@@ -38,4 +47,7 @@
   // logo-colors
   --logo-colors-text: #fff;
   --logo-colors-circle: #343542;
+
+  //succsess colors
+  --succsess-colors-70: #e2f8f033;
 }
