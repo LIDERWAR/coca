@@ -6,7 +6,7 @@ export const useTheme = () => {
   const theme = localStorage.getItem('theme') || 'light';
   themeTargetDataset.theme = theme;
 
-  if (theme ==='dark') {
+  if (theme === 'dark') {
     themeSwitcher.checked = true;
   }
 
@@ -15,7 +15,7 @@ export const useTheme = () => {
       themeTargetDataset.theme = 'dark';
       localStorage.setItem('theme', 'dark');
     } else {
-      themeTargetDataset.theme ='light';
+      themeTargetDataset.theme = 'light';
       localStorage.setItem('theme', 'light');
     }
   });

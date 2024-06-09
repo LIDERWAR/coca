@@ -19,8 +19,6 @@ html {
   background-color: var(--neutral-colors-10);
   overflow-x: hidden;
 
-
-
   &::before,
   &::after {
     content: '';
@@ -29,7 +27,6 @@ html {
     z-index: var(--z-index-0);
     display: inline-block;
   }
-
 
   &--fixed {
     overflow-y: hidden;
