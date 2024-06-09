@@ -13,6 +13,9 @@
   --logo-colors-text: #101010;
   --logo-colors-circle: #101010;
 
+  // overview colors
+  --overview-bg-colors:#1d1e25;
+
   //primary-colors
   --primary-colors-50: #4e7ddb;
 
@@ -31,6 +34,12 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
+  @include mini-desktop {
+    --container-width: 1000px;
+  }
+  @include tablet {
+    --container-width: 860px;
+  }
   @include mobile {
     --container-width: 480px;
   }
@@ -50,4 +59,7 @@
 
   //succsess colors
   --succsess-colors-70: #e2f8f033;
+
+    // overview colors
+    --overview-bg-colors:#18181d;
 }

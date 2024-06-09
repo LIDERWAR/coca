@@ -1,13 +1,12 @@
 .hero {
-  position: relative;
-  padding-top: 87px 0 141px;
+  padding: 87px 0 141px;
 
   @include mini-desktop {
-    padding: 67px 0 121px;
+    padding: 77px 0 121px;
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    // min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -65,7 +64,9 @@
   }
 
   &__left {
-    max-width: 599px;
+    @include mini-desktop {
+      max-width: 617px;
+    }
   }
 
   &__title {
@@ -96,6 +97,12 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -225,7 +232,8 @@
     }
 
     &-body {
-      &-th {
+      &-td {
+        white-space: nowrap;
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
