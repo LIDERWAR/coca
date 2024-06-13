@@ -24,6 +24,7 @@
     "vite-plugin-minify": "^1.5.2"
   },
   "dependencies": {
-    "stylelint": "^16.6.1"
+    "stylelint": "^16.6.1",
+    "swiper": "^11.1.4"
   }
 }
