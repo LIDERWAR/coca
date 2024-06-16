@@ -60,7 +60,7 @@
       display: inline-block;
       width: 117px;
       height: 77px;
-      background: url('../icons/quotes-icon.svg');
+      background: url('../icons/quotes-icon.svg') no-repeat;
       transform: translateY(15px);
 
       @include mini-desktop {
