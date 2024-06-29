@@ -209,7 +209,7 @@
       &::before {
         content: '';
         display: inline-block;
-        background: url(../icons/pricing-tick-icon.svg) no-repeat;
+        background: url(../assets/icons/pricing-tick-icon.svg) no-repeat;
         width: 22px;
         height: 22px;
         margin-right: 8px;
@@ -229,7 +229,7 @@
         color: var(--neutral-colors-150);
 
         &::before {
-          background: url(../icons/pricing-tick-inaccess-icon.svg) no-repeat;
+          background: url(../assets/icons/pricing-tick-inaccess-icon.svg) no-repeat;
         }
       }
     }

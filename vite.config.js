@@ -5,18 +5,19 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
   root: './src',
+  base: '/coca/',
   server: {
     port: 3000,
     open: true,
   },
+  publicDir:'./src/assets/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
         main: './src/index.html',
-        about: './src/about.html',
-        pricing: './src/prising.html',
+        pricing: './src/pricing.html',
         contact: './src/contact.html',
       },
     },
