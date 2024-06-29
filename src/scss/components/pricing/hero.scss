@@ -229,7 +229,8 @@
         color: var(--neutral-colors-150);
 
         &::before {
-          background: url(../assets/icons/pricing-tick-inaccess-icon.svg) no-repeat;
+          background: url(../assets/icons/pricing-tick-inaccess-icon.svg)
+            no-repeat;
         }
       }
     }
