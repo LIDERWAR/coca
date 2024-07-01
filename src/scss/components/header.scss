@@ -1,6 +1,9 @@
 .header {
   padding: 26px 0 22px;
-  background-color: transparent;
+  background-color: var(--neutral-colors-10);
+  position: sticky;
+  top:0;
+  z-index: var(--z-index-4);
 
   @include mobile {
     padding: 22px 0 18px;
