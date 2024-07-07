@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 
@@ -32,59 +32,36 @@ export const useTestimonialsSlider = () => {
 
 // =============================================================
 export const partnerSlider = () => {
-  window.addEventListener('DOMContentLoaded', () => {
-    const resizableSwiper = (
-      breakpoint,
-      swiperClass,
-      swiperSettings,
-      callback,
-    ) => {
-      let swiper;
+  const slider = document.querySelector('.partners__slider');
 
-      breakpoint = window.matchMedia(breakpoint);
+  let mySwiper;
 
-      const enableSwiper = function (className, settings) {
-        swiper = new Swiper(className, settings);
-
-        if (callback) {
-          callback(swiper);
-        }
-      };
-
-      const checker = function () {
-        if (breakpoint.matches) {
-          return enableSwiper(swiperClass, swiperSettings);
-        } else {
-          if (swiper !== undefined) swiper.destroy(true, true);
-          return;
-        }
-      };
-
-      breakpoint.addEventListener('change', checker);
-      checker();
-    };
-
-    const someFunc = (instance) => {
-      if (instance) {
-        instance.on('slideChange', function (e) {
-          console.log('*** mySwiper.activeIndex', instance.activeIndex);
-        });
-      }
-    };
-
-    resizableSwiper(
-      '(max-width: 768px)',
-      '.partners__slider',
-      {
-        loop: true,
-        spaceBetween: 32,
-        slidesPerView: 1,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+  function mobileSlider() {
+    if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+      mySwiper = new Swiper(slider, {
+        modules: [Autoplay],
+        slidesPerView: 4,
+        spaceBetween: 10,
+        autoplay: {
+          delay:1000,
         },
-      },
-      someFunc,
-    );
+        loop: true,
+        slideClass: 'partners__slider-item',
+        wrapperClass: 'partners__slider-list',
+      });
+
+      slider.dataset.mobile = 'true';
+    }
+
+    if (window.innerWidth > 768) {
+      slider.dataset.mobile = 'false';
+
+      mySwiper.destroy();
+    }
+  }
+  mobileSlider();
+
+  window.addEventListener('resize', () => {
+    mobileSlider();
   });
 };
