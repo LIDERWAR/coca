@@ -50,4 +50,10 @@
     background-color: #fff;
     border-radius: 16px;
   }
+  &__slider .swiper-wrapper {
+    @include small-desktop {
+      display: flex;
+      column-gap: 0;
+    }
+  }
 }
