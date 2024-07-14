@@ -1,8 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-import 'swiper/css';
-
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
     slidesPerView: 'auto',
@@ -40,23 +38,31 @@ export const partnerSlider = () => {
     if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
         modules: [Autoplay],
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 10,
+        centeredSlides:true,
         autoplay: {
-          delay:1000,
+          delay: 1000,
         },
         loop: true,
         slideClass: 'partners__slider-item',
         wrapperClass: 'partners__slider-list',
+        breakpoints: {
+          651: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+          },
+          451: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }
       });
-
       slider.dataset.mobile = 'true';
     }
-
-    if (window.innerWidth > 768) {
-      slider.dataset.mobile = 'false';
-
-      mySwiper.destroy();
+    if (window.innerWidth > 768 && mySwiper) {
+        mySwiper.destroy(true, true);
+        slider.dataset.mobile = 'false';
     }
   }
   mobileSlider();
