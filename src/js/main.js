@@ -1,4 +1,5 @@
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 import '/scss/main.scss';
 
 // components

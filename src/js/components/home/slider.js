@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
@@ -22,10 +22,14 @@ export const useInsightSlider = () => {
 
 export const useTestimonialsSlider = () => {
   new Swiper('.testimonials__slider', {
-    modules: [Navigation],
-    slidesPerView: 'auto',
+    modules: [Navigation, EffectFade],
+    slidesPerView: 1,
     spaceBetween: 22,
     loop: true,
+    fadeEffect: {
+      crossFade: true,
+    },
+    effect:'fade',
     navigation: {
       prevEl: '.testimonials__btn--prev',
       nextEl: '.testimonials__btn--next',
