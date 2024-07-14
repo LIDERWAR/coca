@@ -3,10 +3,15 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
+    modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
+    navigation: {
+      nextEl: '.insight__slider-btns-right',
+      prevEl: '.insight__slider-btns-left',
+    },
     breakpoints: {
       993: {
         centeredSlides: false,
