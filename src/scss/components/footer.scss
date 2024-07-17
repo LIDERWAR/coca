@@ -146,6 +146,18 @@
     }
   }
 
+  &__sublist {
+    @include small-tablet {
+      max-height: 0;
+      overflow: hidden;
+      transition: var(--transition);
+
+      &--opened {
+        overflow: visible;
+      }
+    }
+  }
+
   &__subitem {
     &:not(:last-child) {
       margin-bottom: 16px;

@@ -11,9 +11,11 @@ import {
   useTestimonialsSlider,
 } from './components/home/slider';
 import { partnerSlider } from './components/home/slider';
+import { accordionFooter } from './components/home/accordion';
 
 useTheme();
 useBurger();
 useInsightSlider();
 useTestimonialsSlider();
 partnerSlider();
+accordionFooter();

@@ -29,7 +29,7 @@ export const useTestimonialsSlider = () => {
     fadeEffect: {
       crossFade: true,
     },
-    effect:'fade',
+    effect: 'fade',
     navigation: {
       prevEl: '.testimonials__btn--prev',
       nextEl: '.testimonials__btn--next',
@@ -49,7 +49,7 @@ export const partnerSlider = () => {
         modules: [Autoplay],
         slidesPerView: 2,
         spaceBetween: 10,
-        centeredSlides:true,
+        centeredSlides: true,
         autoplay: {
           delay: 1000,
         },
@@ -65,13 +65,13 @@ export const partnerSlider = () => {
             slidesPerView: 3,
             spaceBetween: 20,
           },
-        }
+        },
       });
       slider.dataset.mobile = 'true';
     }
     if (window.innerWidth > 768 && mySwiper) {
-        mySwiper.destroy(true, true);
-        slider.dataset.mobile = 'false';
+      mySwiper.destroy(true, true);
+      slider.dataset.mobile = 'false';
     }
   }
   mobileSlider();
