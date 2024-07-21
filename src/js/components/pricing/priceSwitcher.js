@@ -6,16 +6,20 @@ export const usePriceSwitcher = () => {
 
   const priceList = {
     starter: {
-      default: 120,
+      default: 4,
       witchSale: 100,
     },
     popular: {
-      default: 1680,
+      default: 56,
       witchSale: 1400,
     },
     enterprise: {
-      default: 2520,
+      default: 84,
       witchSale: 2100,
+    },
+    time: {
+      day: '/day',
+      month: '/mo',
     },
   };
 
@@ -23,11 +27,17 @@ export const usePriceSwitcher = () => {
     starterPrise.textContent = priceList.starter.witchSale;
     popularPrise.textContent = priceList.popular.witchSale;
     enterprisePrise.textContent = priceList.enterprise.witchSale;
+    starterPrise.nextElementSibling.textContent = priceList.time.month;
+    popularPrise.nextElementSibling.textContent = priceList.time.month;
+    enterprisePrise.nextElementSibling.textContent = priceList.time.month;
   };
   const setPricesWitchDefault = () => {
     starterPrise.textContent = priceList.starter.default;
     popularPrise.textContent = priceList.popular.default;
     enterprisePrise.textContent = priceList.enterprise.default;
+    starterPrise.nextElementSibling.textContent = priceList.time.day;
+    popularPrise.nextElementSibling.textContent = priceList.time.day;
+    enterprisePrise.nextElementSibling.textContent = priceList.time.day;
   };
 
   switcher.checked = true;
