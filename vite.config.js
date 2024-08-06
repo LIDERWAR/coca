@@ -21,7 +21,7 @@ export default defineConfig({
         contact: './src/contact.html',
         about: './src/about.html',
         blog: './src/blog.html',
-        overview: './src/overview.html',
+        // overview: './src/overview.html',
       },
     },
   },
