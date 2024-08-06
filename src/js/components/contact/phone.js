@@ -12,6 +12,8 @@ export const usePhone = () => {
         .catch(() => callback('us'));
     },
     utilsScript:
-      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.1.0/js/utils.js', // just for formatting/placeholders etc
+      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.1.0/js/utils.js' ||
+      '/intl-tel-input/js/utils.js?1721468771539',
+    strictMode: true,
   });
 };
