@@ -25,7 +25,7 @@ export const useMap = () => {
       const content = document.createElement('section');
       const marker = new ymaps3.YMapMarker(
         {
-          coordinates: [130, -25],
+          coordinates: [120, 20],
           draggable: false,
         },
         content,
@@ -36,7 +36,7 @@ export const useMap = () => {
         <h4 class="hero__map-marker-title">Yogja, INA</h4>
         <p class="hero__map-marker-location">100 Smith Street Collingwood VIC 3066 AU</p>
       </div>
-      <img class="hero__map-marker-icon" src="${mapMarkerIcon}" width="54" height="54" alt="marker in map" />
+      <img class="hero__map-marker-icon" src="${mapMarkerIcon}" width="34" height="34" alt="marker in map" />
       </div>`;
     }
 
